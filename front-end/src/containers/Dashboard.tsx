@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 import Table from '../components/Table'
 import NavBar from '../components/NavBar'
-import Form from "./Form";
 
 const Dashboard = () => {
   return (
