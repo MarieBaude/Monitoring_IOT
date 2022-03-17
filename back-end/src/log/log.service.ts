@@ -1,15 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { CreateLogDto } from './dto/create-log.dto';
 import { UpdateLogDto } from './dto/update-log.dto';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class LogService {
+  constructor(private prisma: PrismaService) {}
+
   create(createLogDto: CreateLogDto) {
     return 'This action adds a new log';
   }
 
-  findAll() {
-    return `This action returns all log`;
+  async findAll() {
+    return this.prisma.log.findMany();
   }
 
   findOne(id: number) {
