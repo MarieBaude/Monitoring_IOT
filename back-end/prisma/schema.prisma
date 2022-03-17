@@ -19,7 +19,7 @@ model Module {
 
 model Detail {
   id                    Int             @id @default(autoincrement())
-  value                Int
+  value                 Int
   duration              Int
   number                Int
   state                 Boolean

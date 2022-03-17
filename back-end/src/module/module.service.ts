@@ -8,12 +8,14 @@ import { PrismaService } from '../prisma/prisma.service';
 export class ModuleService {
   constructor(private prisma: PrismaService) {}
 
-  create(createModuleDto: CreateModuleDto) {
-    return 'This action adds a new module';
+  async create(createModuleDto: CreateModuleDto) {
+    return await this.prisma.module.create({
+      data: createModuleDto
+    });
   }
 
   async findAll() {
-    return this.prisma.module.findMany();
+    return await this.prisma.module.findMany();
   }
 
   findOne(id: number) {
