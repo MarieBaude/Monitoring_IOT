@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
-import Table from '../components/Table'
 import NavBar from '../components/NavBar'
+import TableBody from '../components/DashboardTableBody';
+import TableHead from "../components/DashboardTableHead";
+
 
 const Dashboard = () => {
   return (
@@ -26,7 +28,18 @@ const Dashboard = () => {
                 </Link>
                 
                 <div className="px-4 py-6 sm:px-0">
-                    <Table />
+                    <div className="flex flex-col">
+                        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                            <div className="inline-block py-2 min-w-full sm:px-6 lg:px-8">
+                                <div className="overflow-hidden shadow-md sm:rounded-lg">
+                                    <table className="min-w-full">
+                                        <TableHead />
+                                        <TableBody />
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
