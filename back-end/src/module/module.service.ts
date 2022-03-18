@@ -15,11 +15,20 @@ export class ModuleService {
   }
 
   async findAll() {
-    return await this.prisma.module.findMany();
+    return await this.prisma.module.findMany(
+      {
+      include: { 
+        detail:true
+       }
+    }
+    );
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} module`;
+  async findOne(id: number) {
+    return await this.prisma.module.findUnique({
+      where: { id: id },
+      include: { detail: true }
+    });
   }
 
   update(id: number, updateModuleDto: UpdateModuleDto) {
