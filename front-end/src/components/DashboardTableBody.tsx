@@ -29,7 +29,7 @@ const TableBody = () => {
         fetch("http://localhost:8000/module")
             .then((res) => res.json())
             .then(
-                (data) => {console.log(data); setModules(data); setDetails(data.detail)}, 
+                (data) => {setModules(data); setDetails(data.detail)}, 
                 (error) => {setError(error)}
             )
     }, []);
