@@ -8,17 +8,17 @@ type typeModule = {
 }
 
 const NewModule = () => {
-    // const [modules, setModules] = useState<typeModule[]>([])
-    // const [error, setError] = useState(null)
+    const [modules, setModules] = useState<typeModule[]>([])
+    const [error, setError] = useState(null)
 
-    // useEffect(() => {
-    //     fetch("http://localhost:8000/module")
-    //         .then((res) => res.json())
-    //         .then(
-    //             (data) => {setModules(data)}, 
-    //             (error) => {setError(error)}
-    //         )
-    // }, []);
+    useEffect(() => {
+        fetch("http://localhost:8000/module")
+            .then((res) => res.json())
+            .then(
+                (data) => {setModules(data)}, 
+                (error) => {setError(error)}
+            )
+    }, []);
 
     return (
     <form>
