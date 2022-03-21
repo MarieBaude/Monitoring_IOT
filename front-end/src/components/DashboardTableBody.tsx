@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Graph from "./Graph";
 
 type typeDetail = {
     id : number;             
@@ -60,6 +61,9 @@ const TableBody = () => {
 
                             <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                 {module.detail[0].state ? 'OK' : 'KO'}
+                            </td>
+                            <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                <Graph />
                             </td>
                         </tr>
                     ))}
