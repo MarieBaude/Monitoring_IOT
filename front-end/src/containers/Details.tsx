@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar'
 import DetailsTableHead from '../components/DetailsTableHead'
 import DetailsTableBody from '../components/DetailsTableBody';
+import Graph from '../components/Graph';
 
 const Details = () => {
   return (
@@ -16,6 +17,7 @@ const Details = () => {
         </header>
 
         <main>
+            <Graph />
             <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                 <div className="px-4 py-6 sm:px-0">
                     <div className="flex flex-col">
@@ -32,8 +34,8 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-        </main>
-        
+        </main>  
+         
     </div>
   )
 }

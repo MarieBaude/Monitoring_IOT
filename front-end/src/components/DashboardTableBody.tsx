@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Graph from "./Graph";
 
 type typeDetail = {
     id : number;             
@@ -29,7 +28,7 @@ const TableBody = () => {
         fetch("http://localhost:8000/module")
             .then((res) => res.json())
             .then(
-                (data) => {console.log(data); setModules(data); setDetails(data.detail)}, 
+                (data) => {setModules(data); setDetails(data.detail)}, 
                 (error) => {setError(error)}
             )
     }, []);
@@ -41,6 +40,7 @@ const TableBody = () => {
             <tbody>
                     {modules.map((module) => (
                         <tr key={module.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            
                             <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <Link to={`/details/${module.id}`}>
                                         {module.name}
@@ -61,9 +61,6 @@ const TableBody = () => {
 
                             <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                 {module.detail[0].state ? 'OK' : 'KO'}
-                            </td>
-                            <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                <Graph />
                             </td>
                         </tr>
                     ))}

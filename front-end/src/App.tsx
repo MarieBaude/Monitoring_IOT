@@ -10,8 +10,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/form" element={<Form />} />
       <Route path="/module:id" element={<Details />} />
+      <Route path="/form" element={<Form />} />
     </Routes>
   );
 }

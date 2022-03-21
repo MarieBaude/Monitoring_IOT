@@ -22,11 +22,13 @@ const DetailsTableBody = () => {
 
     if (error) {
         return <div>Error: {JSON.stringify(error)}</div>;
+        
     } else {
         return (
             <tbody>
                 {logs.map((log) => (
                     <tr key={log.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        
                         <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {log.date}
                         </td>
@@ -34,6 +36,7 @@ const DetailsTableBody = () => {
                         <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                             {log.valueSave}
                         </td>
+
                     </tr>
                 ))}
             </tbody>

@@ -35,6 +35,7 @@ const Graph = () => {
   return (
     <div>
         {/* <canvas id="myChart"></canvas> */}
+        Graph here
     </div>
   )
 }
