@@ -26,28 +26,20 @@
 // };
 
 // const myChart = new Chart(
-//     document.getElementById('myChart'),
+//     document.getElementById('myChart') as HTMLCanvasElement,
 //     config
 // );
 
-// import React from 'react'
-
-// const Graph = () => {
-//   return (
-//     <div>
-//         <canvas id="myChart"></canvas>
-//     </div>
-//   )
-// }
-
-// export default Graph
-
-import React from 'react'
 
 const Graph = () => {
   return (
-    <div>Graph</div>
+    <div>
+        {/* <canvas id="myChart"></canvas> */}
+    </div>
   )
 }
 
 export default Graph
+
+
+
