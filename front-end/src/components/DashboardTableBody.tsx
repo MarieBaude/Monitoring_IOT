@@ -20,7 +20,6 @@ type typeModule = {
 
 
 const TableBody = () => {
-
     const [modules, setModules] = useState<typeModule[]>([])
     const [details, setDetails] = useState<typeDetail[]>([])
     const [error, setError] = useState(null)
