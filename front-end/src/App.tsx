@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/form" element={<Form />} />
-      <Route path="/details" element={<Details />} />
+      <Route path="/module:id" element={<Details />} />
     </Routes>
   );
 }

@@ -42,7 +42,7 @@ const TableBody = () => {
                     {modules.map((module) => (
                         <tr key={module.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <Link to="/details">
+                                <Link to={`/details/${module.id}`}>
                                         {module.name}
                                 </Link>
                             </td>

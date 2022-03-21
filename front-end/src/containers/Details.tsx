@@ -1,6 +1,5 @@
-import React from 'react'
-import DetailsTableHead from '../components/DetailsTableHead'
 import NavBar from '../components/NavBar'
+import DetailsTableHead from '../components/DetailsTableHead'
 import DetailsTableBody from '../components/DetailsTableBody';
 
 const Details = () => {
