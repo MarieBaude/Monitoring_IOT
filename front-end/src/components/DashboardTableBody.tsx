@@ -25,7 +25,7 @@ const TableBody = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:8000/module")
+        fetch("https://alleluia.herokuapp.com/module")
             .then((res) => res.json())
             .then(
                 (data) => {setModules(data); setDetails(data.detail)}, 

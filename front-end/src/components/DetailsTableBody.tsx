@@ -12,7 +12,7 @@ const DetailsTableBody = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:8000/log")
+        fetch("https://alleluia.herokuapp.com/log")
             .then((res) => res.json())
             .then(
                 (data) => {console.log(data); setLogs(data);}, 
