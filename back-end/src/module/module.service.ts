@@ -49,7 +49,9 @@ export class ModuleService {
     return `This action updates a #${id} module`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} module`;
+  async remove(id: number) {
+    return await this.prisma.module.delete({
+      where: { id: id },
+    });
   }
 }
