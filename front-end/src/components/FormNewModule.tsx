@@ -7,6 +7,7 @@ interface IFormInput {
     city: String;
     type: String;
     duration: Number;
+    number: Number;
     state: Boolean;
     value: Number;
 }
@@ -71,13 +72,21 @@ const NewModule = () => {
                     {...register("duration")} 
                 />
 
+                <label>Number</label>
+                <input 
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                    placeholder=" " 
+                    required
+                    {...register("number")} 
+                />
+
                 <br />
                 <select 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     {...register("state")} 
                 >
-                    <option value="true">On</option>
-                    <option value="false">Off</option>
+                    <option value={1}>On</option>
+                    <option value={0}>Off</option>
                 </select>
                 <br />
 

@@ -11,7 +11,20 @@ export class ModuleService {
   async create(createModuleDto: CreateModuleDto) {
     console.log(createModuleDto)
     return await this.prisma.module.create({
-      data: createModuleDto
+      data:{
+        name: createModuleDto.name,
+        type: createModuleDto.type,
+        city: createModuleDto.city,
+
+        detail: {
+          create: {
+            value: +createModuleDto.value,
+            duration: +createModuleDto.duration,
+            number: +createModuleDto.number,
+            state: createModuleDto.state
+          }
+        }
+      }
     });
   }
 
