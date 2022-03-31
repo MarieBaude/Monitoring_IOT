@@ -21,7 +21,7 @@ export class ModuleService {
             value: +createModuleDto.value,
             duration: +createModuleDto.duration,
             number: +createModuleDto.number,
-            state: createModuleDto.state
+            state: +createModuleDto.state? true : false
           }
         }
       }
