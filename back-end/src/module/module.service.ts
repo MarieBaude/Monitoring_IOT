@@ -9,7 +9,6 @@ export class ModuleService {
   constructor(private prisma: PrismaService) {}
 
   async create(createModuleDto: CreateModuleDto) {
-    console.log(createModuleDto)
     return await this.prisma.module.create({
       data:{
         name: createModuleDto.name,
