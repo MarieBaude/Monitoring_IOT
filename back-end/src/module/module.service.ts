@@ -10,7 +10,20 @@ export class ModuleService {
 
   async create(createModuleDto: CreateModuleDto) {
     return await this.prisma.module.create({
-      data: createModuleDto
+      data:{
+        name: createModuleDto.name,
+        type: createModuleDto.type,
+        city: createModuleDto.city,
+
+        detail: {
+          create: {
+            value: +createModuleDto.value,
+            duration: +createModuleDto.duration,
+            number: +createModuleDto.number,
+            state: +createModuleDto.state? true : false
+          }
+        }
+      }
     });
   }
 
@@ -35,7 +48,9 @@ export class ModuleService {
     return `This action updates a #${id} module`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} module`;
+  async remove(id: number) {
+    return await this.prisma.module.delete({
+      where: { id: id },
+    });
   }
 }

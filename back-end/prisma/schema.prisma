@@ -24,7 +24,7 @@ model Detail {
   duration              Int
   number                Int
   state                 Boolean
-  module                Module          @relation(fields: [moduleId], references: [id])
+  module                Module          @relation(fields: [moduleId], references: [id], onDelete: Cascade)
   moduleId              Int
   log                   Log[]
 }

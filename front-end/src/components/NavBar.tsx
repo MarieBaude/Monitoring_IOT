@@ -6,7 +6,7 @@ const NavBar = () => {
                 <div className="flex items-center">
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
+                            <a href="/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 Dashboard
                             </a>
                         </div>
